@@ -1,5 +1,5 @@
-# Title : BADGE : Blender AI Dataset Generation Engine
-# Project : GUI Designer DearPyGUI
+# Title : Camera Look at Object
+# Project : BADGE : Blender AI Dataset Generation Engine
 # Author : Tej Pandit
 # Date : Dec 2023
 
