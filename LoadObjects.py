@@ -15,3 +15,13 @@ for filename in os.listdir(folder_path):
        filepath = os.path.join(folder_path, filename)
        bpy.ops.import_scene.obj(filepath=filepath)
 
+# Position all imported objects at the origin
+for obj in bpy.context.scene.objects:
+   if obj.type == "MESH":
+       obj.location = (0, 0, 0)
+
+# Hide all objects except the first one
+for obj in bpy.context.scene.objects[1:]:
+   obj.hide_viewport = True
+   obj.hide_render = True
+   
