@@ -1,7 +1,7 @@
 # Title : Camera Revolving around Target
 # Project : BADGE : Blender AI Dataset Generation Engine
 # Author : Tej Pandit
-# Date : Dec 2023
+# Date : Feb 2024
 
 import bpy
 import math
