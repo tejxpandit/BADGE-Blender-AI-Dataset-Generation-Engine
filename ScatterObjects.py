@@ -16,3 +16,12 @@ def random_location_within_bounds(obj):
     max_x, max_y, max_z = obj.bound_box[6]
     return (random.uniform(min_x, max_x), random.uniform(min_y, max_y), min_z)
 
+# Scatter objects from the collection
+for obj in collection.objects:
+    # Create a copy of the object
+    new_obj = obj.copy()
+    new_obj.location = random_location_within_bounds(plane_obj)
+
+    # Link the copied object to the current scene
+    scene = bpy.context.scene
+    scene.collection.objects.link(new_obj)
