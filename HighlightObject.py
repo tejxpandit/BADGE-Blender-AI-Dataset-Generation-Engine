@@ -25,3 +25,7 @@ for obj in selected_objs:
         # Add pink material to object
         obj.data.materials.append(pink_material)
 
+# Set the color of all other objects to white
+for obj in non_selected_objs:
+    if obj.data.materials:
+        obj.data.materials[0].diffuse_color = (1, 1, 1, 1)  # White
