@@ -16,3 +16,12 @@ pink = (1, 0.75, 0.75, 1)  # (red, green, blue, alpha)
 pink_material = bpy.data.materials.new(name="Pink Material")
 pink_material.diffuse_color = pink
 
+# Assign pink material to selected objects
+for obj in selected_objs:
+    if obj.data.materials:
+        # Replace existing material with pink material
+        obj.data.materials[0] = pink_material
+    else:
+        # Add pink material to object
+        obj.data.materials.append(pink_material)
+
